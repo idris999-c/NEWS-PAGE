@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.about-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+}
+
+/* Geri Dön Butonu */
+.back-to-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;  /* Font boyutunu büyüttük */
+    font-weight: bold;
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-to-home .back-icon {
+    font-size: 36px;  /* Ok simgesinin boyutunu büyüttük */
+    margin-right: 10px;
+}
+
+.back-to-home:hover {
+    color: #2980b9;
+}
+
+/* Hakkımızda Başlık */
+.about-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.about-header p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Değerlerimiz */
+.about-values {
+    margin-bottom: 40px;
+}
+
+.about-values h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.values-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.value-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.value-item h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.value-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Ekibimiz */
+.about-team {
+    margin-bottom: 40px;
+}
+
+.about-team h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.team-member {
+    text-align: center;
+    width: 30%;
+}
+
+.team-member h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #555;
+    font-style: italic;
+}

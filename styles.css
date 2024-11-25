@@ -14,38 +14,11 @@
     margin-left: 93%;
     margin-top: -45px;
 }
-.sidebar ul {
-list-style-type: none;
-
-width: 16%;
-}
-
-.sidebar ul li {
-    padding: 10px;
-    background-color: rgb(46, 40, 40);
-    margin-left: -30px;
-}
-
-.sidebar ul li:hover{
-   background-color: red;
-   transition: 0.5s;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: white;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-margin-left: 5px;
-}
-
-.sidebar ul li a i{
-font-size: 20px;
-color: aqua;
-
-}
 
 .üsthabergün {
     padding-top: 30px;
+    display: inline-block;
+    margin-top: 60px;
 
 }
 
@@ -65,7 +38,7 @@ color: aqua;
     /* İç boşluğu sıfırlar */
     margin: 0;
     /* Dış boşluğu sıfırlar */
-    word-spacing: 260px;
+    word-spacing: 160px;
     margin-left: 40px;
     margin-top: -10px;
     letter-spacing: 5px;

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim Formu</title>
+    <link rel="stylesheet" href="email.css">
+</head>
+<body>
+    <div class="chat-box">
+        <div class="chat-header">
+            <!-- Geri Dön Butonu Anasayfaya Yönlendirecek -->
+            <a href="/" class="back-link">Geri Dön</a> <!-- Anasayfaya yönlendirme -->
+            <h2>Bizlere Ulaşın</h2>
+        </div>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain" class="email-form">
+            <div class="input-group">
+                <label for="subject">Konu:</label>
+                <input type="text" id="subject" name="subject" required placeholder="Konu girin">
+            </div>
+            <div class="input-group">
+                <label for="content">İçerik:</label>
+                <input type="text" id="content" name="content" required placeholder="İçerik girin">
+            </div>
+            <div class="input-group">
+                <label for="message">Mesaj:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Mesajınızı buraya yazın"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Gönder</button>
+        </form>
+    </div>
+</body>
+</html>

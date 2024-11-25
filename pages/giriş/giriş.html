@@ -1,11 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Giriş Yap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            position: relative;
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .forgot-password {
+            font-size: 14px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .register-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .register-btn:hover {
+            background-color: #218838;
+        }
+        .links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Geri Dön Ok Simgesi */
+        .back-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: none; /* Çizgiyi kaldırmak için */
+        }
+
+        .back-icon:hover {
+            color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>welcome</h1>
+
+<div class="login-container">
+    <!-- Geri Dön Ok Simgesi (Sol Üst Köşe) -->
+    <a href="/" class="back-icon">&#8592;</a>
+
+    <h2>Giriş Yap</h2>
+    <form action="/login" method="POST">
+        <input type="email" class="input-field" placeholder="E-posta" name="email" required>
+        <input type="password" class="input-field" placeholder="Şifre" name="password" required>
+        
+        <div class="links">
+            <a href="/forgot-password" class="forgot-password">Şifreni mi unuttun?</a>
+            <a href="/register" class="forgot-password">Kayıt Ol</a>
+        </div>
+        
+        <button type="submit" class="register-btn">Giriş Yap</button>
+    </form>
+</div>
+
 </body>
 </html>
