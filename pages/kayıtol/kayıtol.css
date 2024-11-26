@@ -1,0 +1,102 @@
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form container */
+.form-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Başlık */
+.form-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form grupları */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #0066cc;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Button */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+    background-color: #0066cc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: #005bb5;
+}
+
+/* Kayıt ol / Switch Link */
+.switch-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.switch-link a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.switch-link a:hover {
+    text-decoration: underline;
+}
+
+/* Mobil uyumlu */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 20px;
+        margin: 50px auto;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
