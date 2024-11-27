@@ -1,5 +1,5 @@
 .x {
-    background-image: url(resim/news.jpeg);
+ 
     background-size: cover;
     background-position: auto;
 }
@@ -15,11 +15,42 @@
     margin-top: -45px;
 }
 
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1000px;
+    margin-top: -50px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
 .üsthabergün {
     padding-top: 30px;
     display: inline-block;
-    margin-top: 60px;
-
+    margin-top: -50px;
+margin-left:180px;
 }
 
 .üsthabergün ul li a {
@@ -38,7 +69,7 @@
     /* İç boşluğu sıfırlar */
     margin: 0;
     /* Dış boşluğu sıfırlar */
-    word-spacing: 160px;
+    word-spacing: 130px;
     margin-left: 40px;
     margin-top: -10px;
     letter-spacing: 5px;

@@ -15,6 +15,24 @@ body {
     margin: 0;
 }
 
+.emial-back-btn{
+       text-decoration: none;    
+    padding: 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.emial-back-btn:hover{
+    background-color: #2980b9;
+}
+
 .chat-box {
     background-color: #ffffff;
     border-radius: 10px;
@@ -33,18 +51,15 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
+    margin-left: -150px;
 }
 
 .back-link {
     text-decoration: none;
     font-size: 16px;
-    color: #3498db;
+    color: white;
     font-weight: bold;
     transition: color 0.3s;
-}
-
-.back-link:hover {
-    color: #2980b9;
 }
 
 h2 {
