@@ -1,35 +1,65 @@
-<!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim Formu</title>
+    <title>HaberGün.com</title>
     <link rel="stylesheet" href="email.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<body>
-    <div class="chat-box">
-        <div class="chat-header">
-            <!-- Geri Dön Butonu Anasayfaya Yönlendirecek -->
-            <a href="/" class="back-link"><button class="emial-back-btn">&#8592;Geri Dön</a>
-            </button> <!-- Anasayfaya yönlendirme -->
-            <h2>Bizlere Ulaşın</h2>
 
+<body>
+
+    <div class="x">
+        <h1 class="Anabaşlık">GÜNÜN HABERİ</h1>
+
+        <h2 class="giriş">
+            <a href="/pages/giriş/giriş.html">Giriş</a>
+        </h2>
+
+        <a href="#">
+            <i class="fa-solid fa-newspaper"></i>
+        </a>
+        <h2 style="display: inline-block;color: red; font-family: Arial, Helvetica, sans-serif;">
+            HABERGUN</h2>
+
+        <div class="search-container">
+            <input type="text" placeholder="Arama yap..." id="search">
+            <button type="submit">Ara</button>
         </div>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain" class="email-form">
-            <div class="input-group">
+
+        <div class="üsthabergün">
+            <ul>
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/pages/about/about.html">ABOUT</a></li>
+                <li><a href="/pages/email/email.html">EMAIL</a></li>
+                <li><a href="/pages/contact/contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <!-- Bize Ulaşın kısmı ve iletişim formu -->
+        <div class="contact-box">
+            <button class="back-btn" onclick="window.location.href='index.html'">Geri Dön</button>
+
+            <div class="contact-header">
+                <h3>Bizimle İletişime Geçin</h3>
+            </div>
+
+            <form class="contact-form">
+                <label for="email">Mail Adresiniz:</label>
+                <input type="email" id="email" placeholder="Mail adresinizi girin" required>
+
                 <label for="subject">Konu:</label>
-                <input type="text" id="subject" name="subject" required placeholder="Konu girin">
-            </div>
-            <div class="input-group">
-                <label for="content">İçerik:</label>
-                <input type="text" id="content" name="content" required placeholder="İçerik girin">
-            </div>
-            <div class="input-group">
+                <input type="text" id="subject" placeholder="Konu" required>
+
                 <label for="message">Mesaj:</label>
-                <textarea id="message" name="message" rows="5" required placeholder="Mesajınızı buraya yazın"></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Gönder</button>
-        </form>
+                <textarea id="message" placeholder="Mesajınızı yazın" required></textarea>
+
+                <button type="submit" class="submit-btn">Gönder</button>
+            </form>
+        </div>
     </div>
+
 </body>
+
 </html>

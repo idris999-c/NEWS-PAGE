@@ -1,130 +1,158 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Genel Stil */
+.x {
+    background-size: cover;
+    background-position: auto;
 }
 
-body {
-    background-color: #f4f6f9;
+.Anabaşlık {
+    text-align: center;
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.giriş {
+    margin-left: 93%;
+    margin-top: -45px;
+}
+
+.giriş a {
+    color: blue; /* Mavi renk */
+    text-decoration: none; /* Çizgiyi kaldırdık */
+}
+
+.search-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 0;
-    margin: 0;
+    justify-content: center;
+    margin-left: 1000px;
+    margin-top: -50px;
 }
 
-.emial-back-btn{
-       text-decoration: none;    
-    padding: 14px;
-    background-color: #3498db;
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    text-align: center;
+   
 }
 
-.emial-back-btn:hover{
-    background-color: #2980b9;
+button:hover {
+    background-color: #0056b3;
 }
 
-.chat-box {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
+.üsthabergün {
+    padding-top: 30px;
+    display: inline-block;
+    margin-top: -50px;
+    margin-left: 180px;
 }
 
-.chat-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    margin-left: -150px;
-}
-
-.back-link {
+.üsthabergün ul li a {
     text-decoration: none;
-    font-size: 16px;
-    color: white;
+    color: black;
+}
+
+.üsthabergün ul li :hover {
+    color: red;
+}
+
+.üsthabergün ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+    word-spacing: 130px;
+    margin-left: 40px;
+    margin-top: -10px;
+    letter-spacing: 5px;
     font-weight: bold;
-    transition: color 0.3s;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-h2 {
-    font-size: 26px;
-    color: #333;
-    font-weight: 700;
-    text-align: center;
+.üsthabergün ul li {
+    display: inline-block;
 }
 
-.email-form {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+a i {
+    margin-right: 10px;
 }
 
-.input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+i {
+    font-size: 30px;
+    color: rgb(224, 16, 16);
 }
 
-.input-group label {
-    font-size: 16px;
-    color: #555;
-    font-weight: 600;
-}
-
-.input-group input,
-.input-group textarea {
-    padding: 14px;
-    font-size: 16px;
-    border: 2px solid #ddd;
+/* İletişim Formu Stil */
+.contact-box {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
     border-radius: 8px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    outline: none;
-    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
 }
 
-.input-group input:focus,
-.input-group textarea:focus {
-    border-color: #3498db;
-    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+.contact-header h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
 }
 
-.input-group textarea {
-    resize: vertical;
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 6px 10px; /* Küçültülmüş buton boyutu */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color:#0056b3;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
 }
 
 .submit-btn {
-    padding: 14px;
-    background-color: #3498db;
+    width: 100%;
+    padding: 12px;
+    background-color: #f44336;
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    text-align: center;
 }
 
 .submit-btn:hover {
-    background-color: #2980b9;
-}
-
-.submit-btn:active {
-    background-color: #2471a3;
+    background-color: #d32f2f;
 }

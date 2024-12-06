@@ -1,70 +1,134 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Genel Stil */
+.x {
+    background-size: cover;
+    background-position: auto;
 }
 
-body {
-    background-color: #f4f6f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 0;
-    margin: 0;
-}
-
-.contact-info {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-h2 {
-    font-size: 26px;
-    color: #333;
-    font-weight: 700;
-    margin-bottom: 30px;
+.Anabaşlık {
     text-align: center;
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.contact-list {
-    list-style-type: none;
-    width: 100%;
-    padding-left: 0;
+.giriş {
+    margin-left: 93%;
+    margin-top: -45px;
 }
 
-.contact-item {
-    font-size: 18px;
-    color: #555;
-    font-weight: 600;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-}
-
-.contact-number {
-    font-weight: bold;
-    color: #3498db;
-    margin-right: 10px;
-}
-
-.contact-item strong {
-    color: #333;
-}
-
-.contact-item a {
-    color: #3498db;
+.giriş a {
+    color: blue;
     text-decoration: none;
 }
 
-.contact-item a:hover {
-    text-decoration: underline;
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1000px;
+    margin-top: -50px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.üsthabergün {
+    padding-top: 30px;
+    display: inline-block;
+    margin-top: -50px;
+    margin-left: 180px;
+}
+
+.üsthabergün ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.üsthabergün ul li :hover {
+    color: red;
+}
+
+.üsthabergün ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+    word-spacing: 130px;
+    margin-left: 40px;
+    margin-top: -10px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.üsthabergün ul li {
+    display: inline-block;
+}
+
+a i {
+    margin-right: 10px;
+}
+
+i {
+    font-size: 30px;
+    color: rgb(224, 16, 16);
+}
+
+/* Yeni iletişim bilgileri bölümü */
+.contact-info {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-info h3 {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+.contact-info ul li {
+    margin: 10px 0;
+    color: #555;
+}
+
+.contact-info ul li i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.contact-info ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.contact-info ul li a:hover {
+    color: #0056b3;
 }

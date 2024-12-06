@@ -1,38 +1,211 @@
-.x {
- 
-    background-size: cover;
-    background-position: auto;
+/* Sidebar başlangıçta kapalı */
+.sidebar {
+    display: flex;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #332a2a;
+    overflow-x: hidden;
+    transition: width 0.5s ease;
+    padding-top: 60px;
+    padding-left: 0;
+    flex-direction: column;
+    overflow-y: hidden;
 }
 
-.Anabaşlık {
-    text-align: center;
-    color: red;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+/* Sidebar açılınca gösterme */
+.sidebar-toggle:checked+.sidebar {
+    opacity: 1;
+    visibility: visible;
+    max-width: 250px;
+    padding-left: 30px;
 }
 
-.giriş {
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .close-btn {
+    font-size: 36px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.sidebar h3 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* Sidebar açılma animasyonu */
+.sidebar-toggle:checked+.sidebar {
+    width: 250px;
+    padding-left: 30px;
+}
+
+
+/* Close button inside sidebar */
+.sidebar .close-btn {
+    font-size: 36px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* When sidebar is open, shift content to the right */
+.sidebar-toggle:checked~.main-content {
+    margin-left: 250px;
+
+    /* Enable scrolling on the main content */
+}
+
+/* Ana içerik kaydırma */
+.sidebar-toggle:checked~.main-content {
+    margin-left: 250px;
+    transition: margin-left 0.5s ease;
+}
+
+/* Sidebar açıldığında sadece sidebar'a scroll eklemek */
+.sidebar-toggle:checked~.sidebar {
+    overflow-y: auto;
+    /* Sidebar açıldığında sidebar'a scroll eklenir */
+    height: 100%;
+    /* Sidebar yüksekliği %100 */
+}
+
+body {
+    /* Sayfa kaydırma çubuklarını kaldır */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+/* Sidebar içeriği */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar .social-media a {
+    display: block;
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.sidebar .social-media a:hover {
+    color: #f1f1f1;
+}
+
+/* Social Media Links */
+.sidebar hr {
+    border: 1px solid #fff;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.sidebar .social-media {
+    margin-top: 30px;
+}
+
+/* Main content */
+.main-content {
+    margin-left: 30px;
+    padding: 20px;
+    transition: margin-left 0.5s;
+}
+
+/* Sidebar açma butonu */
+.open-btn {
+    display: inline-block;
+    font-size: 30px;
+    color: rgb(224, 16, 16);
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.open-btn i {
+    margin-right: 10px;
+}
+
+/* Close button on sidebar */
+.close-btn {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.Header {
+    margin-left: 40%;
+    margin-top: -1%;
+}
+
+
+/* Log in link */
+.Login {
     margin-left: 93%;
     margin-top: -45px;
 }
 
+.Login a {
+    color: #007bff;
+    text-decoration: none;
+}
 
-.search-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 1000px;
-    margin-top: -50px;
-  }
-  
-  input[type="text"] {
+.Login a:hover {
+    color: red;
+}
+
+
+
+input[type="text"] {
     padding: 10px;
     font-size: 16px;
     width: 200px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  
-  button {
+}
+
+input#sidebar-toggle {
+    display: none;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 80%;
+    margin-top: -4%;
+}
+
+button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #007bff;
@@ -40,36 +213,39 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-.üsthabergün {
-    padding-top: 30px;
-    display: inline-block;
-    margin-top: -50px;
-margin-left:180px;
+    
 }
 
-.üsthabergün ul li a {
+button:hover {
+    background-color: #0056b3;
+}
+
+.Navbar {
+
+    display: inline-block;
+    margin-top: -1.5%;
+    margin-left: 13%;
+}
+
+.Navbar ul li a {
     text-decoration: none;
     color: black;
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr;*/
 }
 
-.üsthabergün ul li :hover {
+.Navbar ul li :hover {
     color: red;
 }
 
-.üsthabergün ul {
+.Navbar ul {
     list-style-type: none;
     /* Madde işaretlerini kaldırır */
     padding: 0;
     /* İç boşluğu sıfırlar */
     margin: 0;
     /* Dış boşluğu sıfırlar */
-    word-spacing: 130px;
+    word-spacing:100%;
     margin-left: 40px;
     margin-top: -10px;
     letter-spacing: 5px;
@@ -77,48 +253,26 @@ margin-left:180px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.üsthabergün ul li {
+.Navbar ul li {
     display: inline-block;
 
 }
 
-.Sondakika {
-    width: 300px;
-    margin-left: 80%;
-    color: yellowgreen;
+.img-content{
+    margin: 20px;   
+    display: grid;
+    grid-template-columns: 4fr 6fr 3fr;
+    column-gap: 20px;
 }
 
-.ortahaber {
-    margin-top: -34%;
-    margin-left: 30%;
+.main-content-bar{
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;*/
 }
 
-a i {
-    margin-right: 10px;
-    /* Simge ile yazı arasındaki boşluğu artırır */
-}
-
-i {
-    font-size: 30px;
-    color: rgb(224, 16, 16);
-}
-
-.ortahaber {
-    display: inline-block;
-    margin-left: 30%;
-    margin-top: -34%;
-    margin-bottom: 100px;
-}
-
-.ortahaber img {
-    height: 600px;
-    width: 650px;
-}
-
-.coklufoto img {
-    margin: auto;
-    word-spacing: 50px;
-    margin-left: 30px;
-    z-index: -1;
-    top: 0px;
-}
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+ }  

@@ -1,141 +1,254 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    /* Genel stil ayarları */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        transition: transform 0.4s ease;
+        background-color: #f4f4f4;
+    }
 
-body {
-    background-color: #f4f6f9;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        background-color: #222;
+        color: white;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
 
-.about-container {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 900px;
-    padding: 40px;
-}
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        cursor: pointer;
+    }
 
-/* Geri Dön Butonu */
-.back-to-home {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    align-items: center;
-    font-size: 24px;  /* Font boyutunu büyüttük */
-    font-weight: bold;
-    color: #3498db;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+    .logo i {
+        margin-right: 10px;
+    }
 
-.back-to-home .back-icon {
-    font-size: 36px;  /* Ok simgesinin boyutunu büyüttük */
-    margin-right: 10px;
-}
+    .Nav-Menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
 
-.back-to-home:hover {
-    color: #2980b9;
-}
+    .Nav-Menu li {
+        margin: 0 10px;
+    }
 
-/* Hakkımızda Başlık */
-.about-header h1 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 15px;
-    text-align: center;
-}
+    .Nav-Menu li a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 16px;
+        transition: background 0.3s;
+    }
 
-.about-header p {
-    font-size: 18px;
-    color: #666;
-    text-align: center;
-    line-height: 1.6;
-    margin-bottom: 40px;
-}
+    .Nav-Menu li a:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
 
-/* Değerlerimiz */
-.about-values {
-    margin-bottom: 40px;
-}
+    .lheader-right {
+        display: flex;
+        align-items: center;
+        padding-right: -10px;
+        margin-right: 10px;
+    }
 
-.about-values h2 {
-    font-size: 26px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-}
+    .lheader-right input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-right: -66px;
+        border-radius: 5px;
+    }
 
-.values-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
+    .lheader-right button {
+        padding: 6px 12px;
+        border: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-right: 20px;
+    }
 
-.value-item {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+    .lheader-right button:hover {
+        background-color: #777;
+    }
 
-.value-item h3 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #3498db;
-    margin-bottom: 10px;
-}
+    .login {
+        text-decoration: none;
+        color: #fff;
+        border-radius: 4px;
+        border: 1px solid white;
+        font-size: 1.2rem;
+        background-color: #333;
+    }
 
-.value-item p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-}
+    .login i{
+    font-size: 1rem;
+    padding-right: 3px;
+    }
 
-/* Ekibimiz */
-.about-team {
-    margin-bottom: 40px;
-}
+    /* Sidebar stilleri */
+    aside {
+        position: fixed;
+        top: 0;
+        left: -25%;
+        width: 25%;
+        height: 100%;
+        background-color: #111;
+        color: white;
+        overflow: hidden;
+        transition: left 0.4s ease;
+        padding-top: 60px;
+        z-index: 999;
+    }
 
-.about-team h2 {
-    font-size: 26px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-}
+    aside h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-.team-members {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
+    aside ul {
+        list-style: none;
+        padding: 0 20px;
+    }
 
-.team-member {
-    text-align: center;
-    width: 30%;
-}
+    aside li {
+        margin: 15px 0;
+    }
 
-.team-member h3 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 5px;
-}
+    aside li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        transition: background 0.3s;
+    }
 
-.team-member p {
-    font-size: 16px;
-    color: #555;
-    font-style: italic;
-}
+    aside li a:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
+
+    /* Checkbox için stil (gizli) */
+    #toggle-sidebar {
+        display: none;
+    }
+
+    /* Sidebar açıldığında ve sayfa sağa kaydığında */
+    #toggle-sidebar:checked~aside {
+        left: 0;
+    }
+
+    #toggle-sidebar:checked~body {
+        transform: translateX(25%);
+    }
+
+    /* Ana içerik (haber listesi) */
+    main {
+        margin: 80px 20px 20px 20px;
+    }
+
+    .news-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .news-item {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .news-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .news-item h2 {
+        font-size: 20px;
+        margin: 15px;
+    }
+
+    .news-item p {
+        font-size: 16px;
+        margin: 0 15px 15px;
+    }
+
+    .news-item a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        background-color: #222;
+        color: white;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+
+    .news-item a:hover {
+        background-color: #555;
+    }
+
+    /* Footer stilleri */
+    footer {
+        background-color: #222;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-container nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer-container nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer-container nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    .social-media a {
+        display: inline-block;
+        margin: 10px;
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .social-media a:hover {
+        color: #777;
+    }
+
+    address p {
+        margin: 5px 0;
+    }
+
+    address a {
+        color: white;
+        text-decoration: underline;
+    }
