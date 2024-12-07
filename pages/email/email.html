@@ -1,64 +1,103 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HaberGün.com</title>
+    <title>BLACKNEWS.com</title>
     <link rel="stylesheet" href="email.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
+    <header>
+        <label for="toggle-sidebar" class="logo"><i class="fa-solid fa-newspaper"></i> BLACK NEWS</label>
 
-    <div class="x">
-        <h1 class="Anabaşlık">GÜNÜN HABERİ</h1>
-
-        <h2 class="giriş">
-            <a href="/pages/giriş/giriş.html">Giriş</a>
-        </h2>
-
-        <a href="#">
-            <i class="fa-solid fa-newspaper"></i>
-        </a>
-        <h2 style="display: inline-block;color: red; font-family: Arial, Helvetica, sans-serif;">
-            HABERGUN</h2>
-
-        <div class="search-container">
-            <input type="text" placeholder="Arama yap..." id="search">
-            <button type="submit">Ara</button>
-        </div>
-
-        <div class="üsthabergün">
+        <nav class="Nav-Menu">
             <ul>
                 <li><a href="/index.html">HOME</a></li>
                 <li><a href="/pages/about/about.html">ABOUT</a></li>
                 <li><a href="/pages/email/email.html">EMAIL</a></li>
                 <li><a href="/pages/contact/contact.html">CONTACT</a></li>
             </ul>
+        </nav>
+
+        <div class="lheader-right">
+
+            <input type="text" placeholder="Search..." id="search">
+            <button type="submit">Search</button>
+
+            <a class="login" href="/pages/giriş/giriş.html"><i class="fa-solid fa-user"></i>login</a>
+
         </div>
 
-        <!-- Bize Ulaşın kısmı ve iletişim formu -->
-        <div class="contact-box">
-            <button class="back-btn" onclick="window.location.href='index.html'">Geri Dön</button>
+    </header>
+    <input type="checkbox" id="toggle-sidebar">
+    <aside>
 
-            <div class="contact-header">
-                <h3>Bizimle İletişime Geçin</h3>
+        <ul>
+            <li><a href="/pages/world/world.html"><i class="fa-solid fa-globe"></i>World</a></li>
+            <li><a href="/pages/breaking news/breaking news.html"><i class="fas fa-newspaper"></i>Breaking News</a></li>
+            <li><a href="/pages/sport/sprot.html"><i class="fa-solid fa-football"></i>Sport</a></li>
+            <li><a href="/pages/Exchange rates/Exchange rates.html"><i
+                        class="fa-solid fa-arrow-right-arrow-left"></i>Exchange rates</a></li>
+        </ul>
+    </aside>
+
+    <section class="email-section">
+        <h1 class="email-title">Email</h1>
+        <p class="email-description">
+            We'd love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.
+        </p>
+
+        <form class="email-form" action="mailto:info@blacknews.com" method="POST" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
             </div>
 
-            <form class="contact-form">
-                <label for="email">Mail Adresiniz:</label>
-                <input type="email" id="email" placeholder="Mail adresinizi girin" required>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+            </div>
 
-                <label for="subject">Konu:</label>
-                <input type="text" id="subject" placeholder="Konu" required>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
 
-                <label for="message">Mesaj:</label>
-                <textarea id="message" placeholder="Mesajınızı yazın" required></textarea>
+            <button type="submit" class="email-submit">Send Email</button>
+        </form>
+    </section>
 
-                <button type="submit" class="submit-btn">Gönder</button>
-            </form>
+    <footer>
+        <div class="footer-container">
+
+            <p>&copy; 2024 BLACK NEWS. All rights reserved.</p>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Terms of Service </a></li>
+                    <li><a href="#">Newsletter Signup</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i> Facebook</a>
+                <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i>Twitter</a>
+                <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i>
+                    Instagram</a>
+            </div>
+
+            <address>
+                <p>Address: Ankara, Turkey</p>
+                <p>Email: <a href="mailto:info@blacknews.com">info@blacknews.com</a></p>
+                <p>Phone: +90 555 555 5555</p>
+            </address>
         </div>
-    </div>
+    </footer>
 
 </body>
 

@@ -1,53 +1,102 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HaberGün.com</title>
+    <title>BLACKNEWS.com</title>
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-</head>     
+</head>
 
 <body>
-    <div class="x">
-        <h1 class="Anabaşlık">GÜNÜN HABERİ</h1>
-        
-        <h2 class="giriş">
-            <a href="/pages/giriş/giriş.html">Giriş</a>
-        </h2>
+    <header>
+        <label for="toggle-sidebar" class="logo"><i class="fa-solid fa-newspaper"></i> BLACK NEWS</label>
 
-        <a href="#">
-            <i class="fa-solid fa-newspaper"></i>
-        </a>
-        <h2 style="display: inline-block;color: red; font-family: Arial, Helvetica, sans-serif;">
-            HABERGUN
-        </h2>
-
-        <div class="search-container">
-            <input type="text" placeholder="Arama yap..." id="search">
-            <button type="submit">Ara</button>
-        </div>
-
-        <div class="üsthabergün">
+        <nav class="Nav-Menu">
             <ul>
                 <li><a href="/index.html">HOME</a></li>
                 <li><a href="/pages/about/about.html">ABOUT</a></li>
                 <li><a href="/pages/email/email.html">EMAIL</a></li>
                 <li><a href="/pages/contact/contact.html">CONTACT</a></li>
             </ul>
+        </nav>
+
+        <div class="lheader-right">
+
+            <input type="text" placeholder="Search..." id="search">
+            <button type="submit">Search</button>
+
+            <a class="login" href="/pages/giriş/giriş.html"><i class="fa-solid fa-user"></i>login</a>
+
         </div>
 
-        <!-- Yeni iletişim bilgileri bölümü -->
-        <div class="contact-info">
-            <h3>İletişim Bilgileri</h3>
-            <ul>
-                <li><i class="fa-solid fa-phone"></i> Telefon: (555) 123-4567</li>
-                <li><i class="fa-solid fa-envelope"></i> E-posta: info@habergun.com</li>
-                <li><i class="fa-solid fa-fax"></i> Fax: (555) 765-4321</li>
-                <li><i class="fa-solid fa-location-dot"></i> Adres: Örnek Mah. No:1, İstanbul</li>
-                <li><i class="fa-solid fa-link"></i> Web Sitesi: <a href="https://www.habergun.com">www.habergun.com</a></li>
-            </ul>
+    </header>
+    <input type="checkbox" id="toggle-sidebar">
+    <aside>
+
+        <ul>
+            <li><a href="/pages/world/world.html"><i class="fa-solid fa-globe"></i>World</a></li>
+            <li><a href="/pages/breaking news/breaking news.html"><i class="fas fa-newspaper"></i>Breaking News</a></li>
+            <li><a href="/pages/sport/sprot.html"><i class="fa-solid fa-football"></i>Sport</a></li>
+            <li><a href="/pages/Exchange rates/Exchange rates.html"><i
+                        class="fa-solid fa-arrow-right-arrow-left"></i>Exchange rates</a></li>
+        </ul>
+    </aside>
+
+    <section class="contact-section">
+        <h1 class="contact-title">Contact Us</h1>
+        <p class="contact-description">
+            Have questions or need assistance? Reach out to us through any of the options below.
+        </p>
+
+        <div class="contact-options">
+            <div class="contact-item">
+                <h2>Phone</h2>
+                <p><i class="fa-solid fa-phone"></i> +90 555 555 5555</p>
+            </div>
+
+            <div class="contact-item">
+                <h2>Email</h2>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@blacknews.com">info@blacknews.com</a></p>
+            </div>
+
+            <div class="contact-item">
+                <h2>Address</h2>
+                <p><i class="fa-solid fa-map-marker-alt"></i> Ankara, Turkey</p>
+            </div>
         </div>
-      
-    </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+
+            <p>&copy; 2024 BLACK NEWS. All rights reserved.</p>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Terms of Service </a></li>
+                    <li><a href="#">Newsletter Signup</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i> Facebook</a>
+                <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i>Twitter</a>
+                <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i>
+                    Instagram</a>
+            </div>
+
+            <address>
+                <p>Address: Ankara, Turkey</p>
+                <p>Email: <a href="mailto:info@blacknews.com">info@blacknews.com</a></p>
+                <p>Phone: +90 555 555 5555</p>
+            </address>
+        </div>
+    </footer>
+
 </body>
+
 </html>

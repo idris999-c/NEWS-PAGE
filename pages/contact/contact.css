@@ -1,134 +1,263 @@
-/* Genel Stil */
-.x {
-    background-size: cover;
-    background-position: auto;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: transform 0.4s ease;
+    background-color: #f4f4f4;
 }
 
-.Anabaşlık {
-    text-align: center;
-    color: red;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #222;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-.giriş {
-    margin-left: 93%;
-    margin-top: -45px;
-}
-
-.giriş a {
-    color: blue;
-    text-decoration: none;
-}
-
-.search-container {
+.logo {
+    font-size: 24px;
+    font-weight: bold;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-left: 1000px;
-    margin-top: -50px;
-}
-
-input[type="text"], input[type="email"], textarea {
-    padding: 10px;
-    font-size: 16px;
-    width: 250px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
+    margin-left: 10px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-.üsthabergün {
-    padding-top: 30px;
-    display: inline-block;
-    margin-top: -50px;
-    margin-left: 180px;
-}
-
-.üsthabergün ul li a {
-    text-decoration: none;
-    color: black;
-}
-
-.üsthabergün ul li :hover {
-    color: red;
-}
-
-.üsthabergün ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 0;
-    word-spacing: 130px;
-    margin-left: 40px;
-    margin-top: -10px;
-    letter-spacing: 5px;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.üsthabergün ul li {
-    display: inline-block;
-}
-
-a i {
+.logo i {
     margin-right: 10px;
 }
 
-i {
-    font-size: 30px;
-    color: rgb(224, 16, 16);
+.Nav-Menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-/* Yeni iletişim bilgileri bölümü */
-.contact-info {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 40px;
+.Nav-Menu li {
+    margin: 0 10px;
+}
+
+.Nav-Menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background 0.3s;
+}
+
+.Nav-Menu li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.lheader-right {
+    display: flex;
+    align-items: center;
+    padding-right: -10px;
+    margin-right: 10px;
+}
+
+.lheader-right input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: -66px;
+    border-radius: 5px;
+}
+
+.lheader-right button {
+    padding: 6px 12px;
+    border: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.lheader-right button:hover {
+    background-color: #777;
+}
+
+.login {
+    text-decoration: none;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid white;
+    font-size: 1.2rem;
+    background-color: #333;
+}
+
+.login i {
+    font-size: 1rem;
+    padding-right: 3px;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: -25%;
+    width: 25%;
+    height: 100%;
+    background-color: #111;
+    color: white;
+    overflow: hidden;
+    transition: left 0.4s ease;
+    padding-top: 60px;
+    z-index: 999;
+}
+
+aside h3 {
     text-align: center;
-}
-
-.contact-info h3 {
-    color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
     margin-bottom: 20px;
 }
 
-.contact-info ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    font-size: 18px;
+aside ul {
+    list-style: none;
+    padding: 0 20px;
 }
 
-.contact-info ul li {
-    margin: 10px 0;
-    color: #555;
+aside li {
+    margin: 15px 0;
 }
 
-.contact-info ul li i {
-    margin-right: 10px;
-    color: #007bff;
-}
-
-.contact-info ul li a {
+aside li a {
+    color: white;
     text-decoration: none;
-    color: #007bff;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s;
 }
 
-.contact-info ul li a:hover {
-    color: #0056b3;
+aside li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+aside li a i {
+    padding: right 10px;
+}
+
+#toggle-sidebar {
+    display: none;
+}
+
+/* Sidebar açıldığında ve sayfa sağa kaydır*/
+#toggle-sidebar:checked~aside {
+    left: 0;
+}
+
+#toggle-sidebar:checked~body {
+    transform: translateX(25%);
+}
+
+.contact-section {
+    background-color: #1c1c1c;
+    color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    color: #d1d1d1;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.contact-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.contact-item h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 5px;
+}
+
+.contact-item p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.contact-item i {
+    color: #fff;
+    margin-right: 5px;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-container nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-container nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #777;
+}
+
+address p {
+    margin: 5px 0;
+}
+
+address a {
+    color: white;
+    text-decoration: underline;
 }

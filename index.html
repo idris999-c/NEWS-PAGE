@@ -1,103 +1,153 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlackNews.com</title>
+    <title>BLACKNEWS.com</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
+    <header>
+        <label for="toggle-sidebar" class="logo"><i class="fa-solid fa-newspaper"></i> BLACK NEWS</label>
 
-    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+        <nav class="Nav-Menu">
+            <ul>
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/pages/about/about.html">ABOUT</a></li>
+                <li><a href="/pages/email/email.html">EMAIL</a></li>
+                <li><a href="/pages/contact/contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
 
-    <div id="sidebar" class="sidebar">
-        <label for="sidebar-toggle" class="close-btn">
-            <i class="fa-solid fa-newspaper"></i>
-        </label>
-        <h3>Sidebar</h3>
+        <div class="lheader-right">
+
+            <input type="text" placeholder="Search..." id="search">
+            <button type="submit">Search</button>
+
+            <a class="login" href="/pages/giriş/giriş.html"><i class="fa-solid fa-user"></i>login</a>
+
+        </div>
+
+    </header>
+    <input type="checkbox" id="toggle-sidebar">
+    <aside>
+
         <ul>
-            <li><a href="#">World</a></li>
-            <li><a href="#">Breaking News</a></li>
-            <li><a href="#">Sport</a></li>
-            <li><a href="#">Weather Forecast</a></li>
-            <li><a href="#">Communication</a></li>
+            <li><a href="/pages/world/world.html"><i class="fa-solid fa-globe"></i>World</a></li>
+            <li><a href="/pages/breaking news/breaking news.html"><i class="fas fa-newspaper"></i>Breaking News</a></li>
+            <li><a href="/pages/sport/sprot.html"><i class="fa-solid fa-football"></i>Sport</a></li>
         </ul>
-        <hr>
-        <div class="social-media">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-        </div>
-    </div>
+    </aside>
 
-    <div class="main-content">
-        <h1 class="Header">
-            NEWS PAGE
-        </h1>
+    <main>
+        <section class="news-list">
+            <article class="news-item">
+                <img src="/access/news1.png" alt="Green nature landscape">
+                <h2> Nature Landscapes in Turkey</h2>
+                <p>Information about green nature areas and tourist spots...</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="news-item">
+                <img src="/access/news2.png" alt="Man reading book">
+                <h2>Reading Habits</h2>
+                <p>Reading rates in Turkey and library projects...</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="news-item">
+                <img src="/access/news3.png" alt="Brown cat portrait">
+                <h2>Adopting Pets</h2>
+                <p>Cat adoption rates in Turkey and care guidelines...</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="news-item">
+                <img src="/access/news4.png" alt="Man drinking tea">
+                <h2>Cultural Tea Tradition</h2>
+                <p>Details about Turkish tea culture and tea houses...</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="news-item">
+                <img src="/access/news5.png" alt="Reading in library">
+                <h2>Libraries and Reading Events</h2>
+                <p>Public libraries and reading events in Turkey...</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="news-item">
+                <img src="/access/news6.png" alt="Chatting elderly couple">
+                <h2>Social Support for the Elderly</h2>
+                <p>Social projects and centers for the elderly in Turkey...</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="news-item">
+                <img src="/access/news7.png" alt="Red winter coat">
+                <h2>Winter Tourism Activities</h2>
+                <p>Information about winter sports and ski resorts in Turkey...</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="news-item">
+                <img src="/access/news8.png" alt="Running two children">
+                <h2>Activities for Children</h2>
+                <p>Nature-based activities for children in Turkey...</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="news-item">
+                <img src="/access/news9.png" alt="Snowy mountain landscape">
+                <h2>Mountaineering Routes</h2>
+                <p>Popular trekking routes and mountaineering guides in Turkey...</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="news-item">
+                <img src="/access/news10.png" alt="Blue abstract pattern">
+                <h2>Abstract Artworks</h2>
+                <p>Modern art exhibitions and artists' works in Turkey...</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="news-item">
+                <img src="/access/news11.png" alt="Canyon at sunset">
+                <h2>Hiking Trails</h2>
+                <p>Popular hiking routes and travel guides in Turkey...</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="news-item">
+                <img src="/access/news12.png" alt="Calm harbor town">
+                <h2>Coastal Towns Guide</h2>
+                <p>Information about peaceful and serene coastal towns in Turkey...</p>
+                <a href="#">Read More</a>
+            </article>
 
-        <h2 class="Login">
-            <a href="/pages/giriş/giriş.html">Log in</a>
-        </h2>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
 
-        <div class="main-content-bar">
-            <div>
-                <label for="sidebar-toggle" class="open-btn">
-                    <i class="fa-solid fa-newspaper"></i>
-                </label>
-                <h2 style="display: inline-block; color: red; font-family: Arial, Helvetica, sans-serif;">
-                    BLACK NEW
-                </h2>
-            </div>
+            <p>&copy; 2024 BLACK NEWS. All rights reserved.</p>
 
-            <div class="Navbar">
+            <nav>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="/pages/about/about.html">ABOUT</a></li>
-                    <li><a href="/pages/email/email.html">EMAIL</a></li>
-                    <li><a href="/pages/contact/contact.html">CONTACT</a></li>
+                    <li><a href="#">Terms of Service </a></li>
+                    <li><a href="#">Newsletter Signup</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
                 </ul>
+            </nav>
+
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i> Facebook</a>
+                <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i>Twitter</a>
+                <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i>
+                    Instagram</a>
             </div>
 
-            <div class="search-container">
-                <input type="text" placeholder="Search..." id="search">
-                <button type="submit">Search</button>
-            </div>
+            <address>
+                <p>Address: Ankara, Turkey</p>
+                <p>Email: <a href="mailto:info@blacknews.com">info@blacknews.com</a></p>
+                <p>Phone: +90 555 555 5555</p>
+            </address>
         </div>
-        <div class="img-content">
-            <div>
-                <img style="width: 100%; height: 60%;" src="/access/haber1.jpg">
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil amet alias repellendus,
-                    <br>
-                    reprehenderit nisi, nemo reiciendis cupiditate enim ea sequi corporis aut ipsam est.
-                    <br>
-                </p>
-            </div>
+    </footer>
 
-            <div>
-                <img style="height: 60%; width: 100%;" src="/access/ortahaber.jpg">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore maiores iusto obcaecati amet, nemo
-                    <br>
-                    est modi, nisi eaque delectus ut temporibus nulla aspernatur commodi debitis sapiente sint nostrum
-
-                </p>
-            </div>
-
-            <div>
-                <img style=" height: 60%;width: 100%;" src="/access/araba.jpg">
-                <p style="color: black;">
-                    Lorem ipsum dolor sit amet consectetur
-                    <br>adipisicing elit. Id eveniet, illo animi
-                    <br>
-                    ipsa dolorem laborum a
-                    possimus odit <br>repudiandaebr
-                    corporis cum aspernatur
-                </p>
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>

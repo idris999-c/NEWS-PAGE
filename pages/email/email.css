@@ -1,158 +1,284 @@
-/* Genel Stil */
-.x {
-    background-size: cover;
-    background-position: auto;
-}
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        transition: transform 0.4s ease;
+        background-color: #f4f4f4;
+    }
 
-.Anabaşlık {
-    text-align: center;
-    color: red;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        background-color: #222;
+        color: white;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
 
-.giriş {
-    margin-left: 93%;
-    margin-top: -45px;
-}
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        cursor: pointer;
+    }
 
-.giriş a {
-    color: blue; /* Mavi renk */
-    text-decoration: none; /* Çizgiyi kaldırdık */
-}
+    .logo i {
+        margin-right: 10px;
+    }
 
-.search-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 1000px;
-    margin-top: -50px;
-}
+    .Nav-Menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
 
-input[type="text"], input[type="email"], textarea {
-    padding: 10px;
-    font-size: 16px;
-    width: 250px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  
-}
+    .Nav-Menu li {
+        margin: 0 10px;
+    }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-   
-}
+    .Nav-Menu li a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 16px;
+        transition: background 0.3s;
+    }
 
-button:hover {
-    background-color: #0056b3;
-}
+    .Nav-Menu li a:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
 
-.üsthabergün {
-    padding-top: 30px;
-    display: inline-block;
-    margin-top: -50px;
-    margin-left: 180px;
-}
+    .lheader-right {
+        display: flex;
+        align-items: center;
+        padding-right: -10px;
+        margin-right: 10px;
+    }
 
-.üsthabergün ul li a {
-    text-decoration: none;
-    color: black;
-}
+    .lheader-right input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-right: -66px;
+        border-radius: 5px;
+    }
 
-.üsthabergün ul li :hover {
-    color: red;
-}
+    .lheader-right button {
+        padding: 6px 12px;
+        border: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-right: 20px;
+    }
 
-.üsthabergün ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 0;
-    word-spacing: 130px;
-    margin-left: 40px;
-    margin-top: -10px;
-    letter-spacing: 5px;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
+    .lheader-right button:hover {
+        background-color: #777;
+    }
 
-.üsthabergün ul li {
-    display: inline-block;
-}
+    .login {
+        text-decoration: none;
+        color: #fff;
+        border-radius: 4px;
+        border: 1px solid white;
+        font-size: 1.2rem;
+        background-color: #333;
+    }
 
-a i {
-    margin-right: 10px;
-}
+    .login i {
+        font-size: 1rem;
+        padding-right: 3px;
+    }
 
-i {
-    font-size: 30px;
-    color: rgb(224, 16, 16);
-}
+    aside {
+        position: fixed;
+        top: 0;
+        left: -25%;
+        width: 25%;
+        height: 100%;
+        background-color: #111;
+        color: white;
+        overflow: hidden;
+        transition: left 0.4s ease;
+        padding-top: 60px;
+        z-index: 999;
+    }
 
-/* İletişim Formu Stil */
-.contact-box {
-    position: relative;
-    width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
-}
+    aside h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-.contact-header h3 {
-    text-align: center;
-    font-size: 24px;
-    color: #333;
-}
+    aside ul {
+        list-style: none;
+        padding: 0 20px;
+    }
 
-.back-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 6px 10px; /* Küçültülmüş buton boyutu */
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+    aside li {
+        margin: 15px 0;
+    }
 
-.back-btn:hover {
-    background-color:#0056b3;
-}
+    aside li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        transition: background 0.3s;
+    }
 
-.contact-form label {
-    font-weight: bold;
-    color: #333;
-}
+    aside li a:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
 
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 15px;
-}
+    aside li a i {
+        padding: right 10px;
+    }
 
-.contact-form textarea {
-    height: 150px;
-    resize: none;
-}
+    #toggle-sidebar {
+        display: none;
+    }
 
-.submit-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+    /* Sidebar açıldığında ve sayfa sağa kaydır */
+    #toggle-sidebar:checked~aside {
+        left: 0;
+    }
 
-.submit-btn:hover {
-    background-color: #d32f2f;
-}
+    #toggle-sidebar:checked~body {
+        transform: translateX(25%);
+    }
+
+    .email-section {
+        background-color: #1c1c1c;
+        color: #f4f4f4;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .email-title {
+        font-size: 2.5rem;
+        color: #fff;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    .email-description {
+        font-size: 1.2rem;
+        color: #d1d1d1;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    .email-form {
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: left;
+        background-color: #2b2b2b;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #f4f4f4;
+        font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 95%;
+        padding: 10px;
+        border: 1px solid #444;
+        border-radius: 5px;
+        background-color: #1c1c1c;
+        color: #f4f4f4;
+        font-size: 1rem;
+        outline: none;
+        transition: border 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color: #555;
+    }
+
+    .email-submit {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 15px;
+        background-color: #555;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+    }
+
+    .email-submit:hover {
+        background-color: #777;
+    }
+
+    footer {
+        background-color: #222;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-container nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer-container nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer-container nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    .social-media a {
+        display: inline-block;
+        margin: 10px;
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .social-media a:hover {
+        color: #777;
+    }
+
+    address p {
+        margin: 5px 0;
+    }
+
+    address a {
+        color: white;
+        text-decoration: underline;
+    }

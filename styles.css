@@ -1,278 +1,253 @@
-/* Sidebar başlangıçta kapalı */
-.sidebar {
-    display: flex;
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    background-color: #332a2a;
-    overflow-x: hidden;
-    transition: width 0.5s ease;
-    padding-top: 60px;
-    padding-left: 0;
-    flex-direction: column;
-    overflow-y: hidden;
-}
-
-/* Sidebar açılınca gösterme */
-.sidebar-toggle:checked+.sidebar {
-    opacity: 1;
-    visibility: visible;
-    max-width: 250px;
-    padding-left: 30px;
-}
-
-.sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    color: #f1f1f1;
-}
-
-.sidebar .close-btn {
-    font-size: 36px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.sidebar h3 {
-    color: white;
-    font-size: 30px;
-    margin-bottom: 30px;
-}
-
-/* Sidebar açılma animasyonu */
-.sidebar-toggle:checked+.sidebar {
-    width: 250px;
-    padding-left: 30px;
-}
-
-
-/* Close button inside sidebar */
-.sidebar .close-btn {
-    font-size: 36px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-/* When sidebar is open, shift content to the right */
-.sidebar-toggle:checked~.main-content {
-    margin-left: 250px;
-
-    /* Enable scrolling on the main content */
-}
-
-/* Ana içerik kaydırma */
-.sidebar-toggle:checked~.main-content {
-    margin-left: 250px;
-    transition: margin-left 0.5s ease;
-}
-
-/* Sidebar açıldığında sadece sidebar'a scroll eklemek */
-.sidebar-toggle:checked~.sidebar {
-    overflow-y: auto;
-    /* Sidebar açıldığında sidebar'a scroll eklenir */
-    height: 100%;
-    /* Sidebar yüksekliği %100 */
-}
-
-body {
-    /* Sayfa kaydırma çubuklarını kaldır */
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-
-/* Sidebar içeriği */
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar ul li {
-    margin: 20px 0;
-}
-
-.sidebar .social-media a {
-    display: block;
-    color: white;
-    margin-top: 10px;
-    text-decoration: none;
-}
-
-.sidebar .social-media a:hover {
-    color: #f1f1f1;
-}
-
-/* Social Media Links */
-.sidebar hr {
-    border: 1px solid #fff;
-    width: 80%;
-    margin: 20px auto;
-}
-
-.sidebar .social-media {
-    margin-top: 30px;
-}
-
-/* Main content */
-.main-content {
-    margin-left: 30px;
-    padding: 20px;
-    transition: margin-left 0.5s;
-}
-
-/* Sidebar açma butonu */
-.open-btn {
-    display: inline-block;
-    font-size: 30px;
-    color: rgb(224, 16, 16);
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.open-btn i {
-    margin-right: 10px;
-}
-
-/* Close button on sidebar */
-.close-btn {
-    cursor: pointer;
-    display: inline-block;
-    font-size: 30px;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.Header {
-    margin-left: 40%;
-    margin-top: -1%;
-}
-
-
-/* Log in link */
-.Login {
-    margin-left: 93%;
-    margin-top: -45px;
-}
-
-.Login a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.Login a:hover {
-    color: red;
-}
-
-
-
-input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-input#sidebar-toggle {
-    display: none;
-}
-
-.search-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 80%;
-    margin-top: -4%;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.Navbar {
-
-    display: inline-block;
-    margin-top: -1.5%;
-    margin-left: 13%;
-}
-
-.Navbar ul li a {
-    text-decoration: none;
-    color: black;
-    display: grid;
-    /*grid-template-columns: 1fr 1fr 1fr;*/
-}
-
-.Navbar ul li :hover {
-    color: red;
-}
-
-.Navbar ul {
-    list-style-type: none;
-    /* Madde işaretlerini kaldırır */
-    padding: 0;
-    /* İç boşluğu sıfırlar */
-    margin: 0;
-    /* Dış boşluğu sıfırlar */
-    word-spacing:100%;
-    margin-left: 40px;
-    margin-top: -10px;
-    letter-spacing: 5px;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.Navbar ul li {
-    display: inline-block;
-
-}
-
-.img-content{
-    margin: 20px;   
-    display: grid;
-    grid-template-columns: 4fr 6fr 3fr;
-    column-gap: 20px;
-}
-
-.main-content-bar{
-    display: grid;
-    /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;*/
-}
-
-@media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      align-items: flex-start;
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        transition: transform 0.4s ease;
+        background-color: #f4f4f4;
     }
- }  
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        background-color: #222;
+        color: white;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .logo i {
+        margin-right: 10px;
+    }
+
+    .Nav-Menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .Nav-Menu li {
+        margin: 0 10px;
+    }
+
+    .Nav-Menu li a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 16px;
+        transition: background 0.3s;
+    }
+
+    .Nav-Menu li a:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
+
+    .lheader-right {
+        display: flex;
+        align-items: center;
+        padding-right: -10px;
+        margin-right: 10px;
+    }
+
+    .lheader-right input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-right: -66px;
+        border-radius: 5px;
+    }
+
+    .lheader-right button {
+        padding: 6px 12px;
+        border: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-right: 20px;
+    }
+
+    .lheader-right button:hover {
+        background-color: #777;
+    }
+
+    .login {
+        text-decoration: none;
+        color: #fff;
+        border-radius: 4px;
+        border: 1px solid white;
+        font-size: 1.2rem;
+        background-color: #333;
+    }
+
+    .login i {
+        font-size: 1rem;
+        padding-right: 3px;
+    }
+
+    aside {
+        position: fixed;
+        top: 0;
+        left: -25%;
+        width: 25%;
+        height: 100%;
+        background-color: #111;
+        color: white;
+        overflow: hidden;
+        transition: left 0.4s ease;
+        padding-top: 60px;
+        z-index: 999;
+    }
+
+    aside h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    aside ul {
+        list-style: none;
+        padding: 0 20px;
+    }
+
+    aside li {
+        margin: 15px 0;
+    }
+
+    aside li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        transition: background 0.3s;
+    }
+
+    aside li a:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
+
+    aside li a i {
+        padding: right 10px;
+    }
+
+    #toggle-sidebar {
+        display: none;
+    }
+
+    /* Sidebar açıldığında ve sayfa sağa kaydır*/
+    #toggle-sidebar:checked~aside {
+        left: 0;
+    }
+
+    #toggle-sidebar:checked~body {
+        transform: translateX(25%);
+    }
+
+    main {
+        margin: 80px 20px 20px 20px;
+    }
+
+    .news-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .news-item {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .news-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .news-item h2 {
+        font-size: 20px;
+        margin: 15px;
+    }
+
+    .news-item p {
+        font-size: 16px;
+        margin: 0 15px 15px;
+    }
+
+    .news-item a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        background-color: #222;
+        color: white;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+
+    .news-item a:hover {
+        background-color: #555;
+    }
+
+    footer {
+        background-color: #222;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-container nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer-container nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer-container nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    .social-media a {
+        display: inline-block;
+        margin: 10px;
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .social-media a:hover {
+        color: #777;
+    }
+
+    address p {
+        margin: 5px 0;
+    }
+
+    address a {
+        color: white;
+        text-decoration: underline;
+    }
