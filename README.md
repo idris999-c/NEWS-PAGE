@@ -1,40 +1,40 @@
 # BLACKNEWS
 
-**BLACKNEWS**, kullanıcıların en güncel haberleri takip edebileceği basit ve kullanıcı dostu bir haber sayfasıdır. Sayfa, modern bir tasarıma sahip olup, sadece HTML ve CSS kullanılarak geliştirilmiştir. Responsive (duyarlı) tasarımı ile farklı cihazlarda düzgün bir şekilde görüntülenebilir.
+**BLACKNEWS** is a simple and user-friendly news page where users can follow the latest news. The page has a modern design and has been developed using only HTML and CSS. With its responsive design, it can be viewed properly on different devices.
 
-## Özellikler
+## Features
 
-- **Güncel Haberler:** Sayfa, en son haberleri basit bir şekilde gösterir.
-- **Kullanıcı Dostu Tasarım:** Modern ve minimal tasarım, haberlerin kolayca okunmasını sağlar.
-- **Responsive Tasarım:** Sayfa, tüm cihazlarda (mobil, tablet, masaüstü) düzgün çalışacak şekilde tasarlanmıştır.
+- **Latest News:** The page displays the most recent news in a simple manner.
+- **User-Friendly Design:** A modern and minimal design that makes news easy to read.
+- **Responsive Design:** The page is designed to work smoothly on all devices (mobile, tablet, desktop).
 
-## Kullanılan Teknolojiler
+## Technologies Used
 
-- **HTML:** Sayfa yapısının oluşturulması için kullanıldı.
-- **CSS:** Sayfanın stil ve tasarımını oluşturmak için kullanıldı.
+- **HTML:** Used to structure the page.
+- **CSS:** Used to style and design the page.
 
-## Projeyi Çalıştırma
+## Running the Project
 
-Bu projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
+To run this project locally on your computer, follow these steps:
 
-1. Bu projeyi bilgisayarınıza klonlayın:
+1. Clone this project to your computer:
 
     ```bash
-    git clone https://github.com/kullaniciadi/blacknews.git
+    git clone https://github.com/idris999-c/NEWS-PAGE.git
     ```
 
-2. Klonladığınız dizine gidin ve index.html dosyasını bir tarayıcıda açın:
+2. Navigate to the cloned directory and open the `index.html` file in your browser:
 
     ```bash
     open index.html
     ```
 
-3. Sayfa tarayıcınızda açılacaktır ve en son haberleri görüntüleyebilirsiniz.
+3. The page will open in your browser, and you can view the latest news.
 
-## Katkıda Bulunma
+## Contributing
 
-Bu projeye katkıda bulunmak isterseniz, önerilerde bulunabilir veya pull request gönderebilirsiniz. Her türlü katkı için teşekkür ederim!
+If you would like to contribute to this project, feel free to suggest improvements or submit a pull request. Any contributions are greatly appreciated!
 
-## Lisans
+## License
 
-Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+This project is licensed under the [MIT License](LICENSE).
