@@ -5,110 +5,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLACKNEWS.com</title>
-    <link rel="stylesheet" href="about.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
-<body>
-    <header>
-        <label for="toggle-sidebar" class="logo"><i class="fa-solid fa-newspaper"></i> BLACK NEWS</label>
+<body class="bg-gray-100">
 
-        <nav class="Nav-Menu">
-            <ul>
-                <li><a href="/index.html">HOME</a></li>
-                <li><a href="/pages/about/about.html">ABOUT</a></li>
-                <li><a href="/pages/email/email.html">EMAIL</a></li>
-                <li><a href="/pages/contact/contact.html">CONTACT</a></li>
+    <header
+        class=" fixed py-6 lg:py-2  top-0 left-0 w-full bg-gray-800 text-white flex justify-between items-center p-4 z-50 ">
+
+        <label for="sidebar-toggle" class="flex items-center text-lg lg:text-2xl font-bold cursor-pointer">
+            <i class="fa-solid fa-newspaper mr-2"></i>
+            BLACKNEWS
+        </label>
+
+        <nav class="hidden lg:block py-6 lg:py-4 text-sm lg:text-lg">
+            <ul class="flex space-x-4">
+                <li><a href="/index.html" class="text-white hover:bg-gray-600 py-2 px-4 rounded-full">HOME</a></li>
+                <li><a href="/pages/about/about.html"
+                        class="text-white hover:bg-gray-600 py-2 px-4 rounded-full">ABOUT</a></li>
+                <li><a href="/pages/email/email.html"
+                        class="text-white hover:bg-gray-600 py-2 px-4 rounded-full">EMAIL</a></li>
+                <li><a href="/pages/contact/contact.html"
+                        class="text-white hover:bg-gray-600 py-2 px-4 rounded-full">CONTACT</a></li>
             </ul>
         </nav>
 
-        <div class="lheader-right">
-            <div class="search-container">
-                <input type="text" placeholder="Search..." id="search">
-                <button type="submit">Search</button>
+        <div class=" flex items-center space-x-2 text-2xsm lg:text-lg">
+            <div
+                class="h-8 lg:h-[38px] w-200 hidden sm:flex flex items-center border border-gray-300 rounded-full overflow-hidden">
+                <input type="text" placeholder="Search..." id="search"
+                    class="px-2 lg:px-4 py-2 w-auto lg:w-[200px] text-black focus:outline-none">
+                <button class="px-1 lg:px-4 py-2  bg-gray-600 text-white hover:bg-gray-700">
+                    Search
+                </button>
             </div>
-    
-            <a class="login" href="/pages/giriş/giriş.html">
-                <i class="fa-solid fa-user"></i> login
+
+            <div class="sm:hidden relative">
+
+                <label class="flex items-center justify-center w-9 h-9 bg-gray-500 rounded-full cursor-pointer">
+                    <i class="fa-solid fa-magnifying-glass text-white"></i>
+                </label>
+
+                <input type="text"
+                    class="absolute left-0 w-48 px-4 py-2 mt-2 text-sm border border-white rounded-md shadow-md outline-none hidden bg-white peer-focus:block transition-all duration-300 ease-in-out">
+            </div>
+
+            <a href="/pages/Login/Login.html" class="text-sm lg:text-lg pr-[5px] sm:pr-[15px] pl-[5px] sm:pl-[15px] text-white border border-white py-1  px-4 rounded-full bg-gray-800 hover:bg-gray-600 
+              text-sm md:text-base lg:text-lg whitespace-nowrap">
+                <i class="fa-solid fa-user mr-1 sm:mr-2"></i> login
             </a>
-        </div>    
 
+        </div>
     </header>
-    <input type="checkbox" id="toggle-sidebar">
-    <aside>
 
+    <input type="checkbox" id="sidebar-toggle" class="peer hidden">
+    <aside
+        class="fixed mt-[-30px] left-0 w-1/4 h-full bg-gray-900 text-white p- pt-[85px] transform -translate-x-full transition-transform duration-300 peer-checked:translate-x-0 z-40">
         <ul>
-            <li><a href="/pages/world/world.html"><i class="fa-solid fa-globe"></i>World</a></li>
-            <li><a href="/pages/breaking news/breaking news.html"><i class="fas fa-newspaper"></i>Breaking News</a></li>
-            <li><a href="/pages/sport/sprot.html"><i class="fa-solid fa-football"></i>Sport</a></li>
+
+            <li><a href="/index.html" class="block lg:hidden py-2 px-4 hover:bg-gray-600 rounded"><i
+                        class="fa-solid fa-house mr-2"></i>Home</a></li>
+            <li><a href="/pages/about/about.html" class="block lg:hidden py-2 px-4 hover:bg-gray-600 rounded"><i
+                        class="fa-solid fa-newspaper mr-2"></i>About</a></li>
+            <li><a href="/pages/email/email.html" class="block lg:hidden py-2 px-4 hover:bg-gray-600 rounded"><i
+                        class="fa-solid fa-phone   mr-2"></i>Email</a></li>
+            <li><a href="/pages/contact/contact.html" class="block lg:hidden py-2 px-4 hover:bg-gray-600 rounded"><i
+                        class="fa-solid fa-envelope mr-2"></i>Contact</a></li>
+            <hr class="block lg:hidden">
+
+            <li><a href="/pages/world/world.html" class="block py-2 px-4 hover:bg-gray-600 rounded"><i
+                        class="fa-solid fa-globe mr-2"></i>World</a></li>
+            <li><a href="/pages/breaking-news/breaking-news.html" class="block py-2 px-4 hover:bg-gray-600 rounded"><i
+                        class="fa-solid fa-newspaper mr-2"></i>Breaking News</a></li>
+            <li><a href="/pages/sport/sport.html" class="block py-2 px-4 hover:bg-gray-600 rounded"><i
+                        class="fa-solid fa-football mr-2"></i>Sport</a></li>
+
         </ul>
     </aside>
 
-    <section class="about-section">
-        <h1 class="about-title">About Us</h1>
-        <p class="about-description">
-            Welcome to <strong>BLACK NEWS</strong>, your trusted source for global news.
-            Our goal is to provide accurate and timely information to keep you informed about
-            the world around you.
-        </p>
+    <main class="max-w-7xl mx-auto p-6 mt-6 space-y-12">
 
-        <div class="about-details">
-            <div class="about-item">
-                <h2>Our Mission</h2>
-                <p>
-                    To deliver unbiased and reliable news, empowering individuals to make
-                    informed decisions in their daily lives.
+        <section class="flex flex-col lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-12">
+            <img src="/access/about/about news1.png" alt="About Image"
+                class=" mt-[50px] h-[300px] w-[400px]rounded-lg shadow-lg">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Who We Are</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    At BLACKNEWS, we are dedicated to providing accurate and timely news to our audience. Our mission is
+                    to inform, educate, and inspire through reliable reporting and insightful storytelling.
+                </p>
+                <p class="text-gray-700 mt-4 leading-relaxed">
+                    Founded in 2024, BLACKNEWS has grown to become a trusted source for news, covering a wide range of
+                    topics including world events, sports, technology, and more.
                 </p>
             </div>
+        </section>
 
-            <div class="about-item">
-                <h2>Our Vision</h2>
-                <p>
-                    To be the most trusted and innovative news platform, connecting people
-                    worldwide through knowledge and insight.
-                </p>
+        <section class="text-center">
+            <h2 class="text-2xl font-bold mb-6">Our Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Integrity</h3>
+                    <p class="text-gray-700">We uphold the highest standards of honesty and ethics in everything we do.
+                    </p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Excellence</h3>
+                    <p class="text-gray-700">We strive for excellence in journalism, delivering quality content to our
+                        readers.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Innovation</h3>
+                    <p class="text-gray-700">We embrace innovation to bring news in the most engaging and accessible
+                        ways.</p>
+                </div>
             </div>
+        </section>
 
-            <div class="about-item">
-                <h2>Our Values</h2>
-                <ul class="about-values">
-                    <li><strong>Integrity:</strong> Honesty and transparency in all our reporting.</li>
-                    <li><strong>Excellence:</strong> Striving for exceptional quality in every story we share.</li>
-                    <li><strong>Respect:</strong> Promoting diversity and inclusivity in every aspect of our work.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        <section>
+            <h2 class="text-2xl font-bold mb-4 text-center">Our Vision</h2>
+            <p class="text-gray-700 text-center leading-relaxed max-w-3xl mx-auto">
+                To be a global leader in digital news, empowering people with the knowledge they need to make informed
+                decisions and positively impact their communities.
+            </p>
+        </section>
+    </main>
 
-    <footer>
-        <div class="footer-container">
-
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <div class="max-w-7xl mx-auto">
             <p>&copy; 2024 BLACK NEWS. All rights reserved.</p>
-
-            <nav>
-                <ul>
-                    <li><a href="#">Terms of Service </a></li>
-                    <li><a href="#">Newsletter Signup</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-8">
+                    <li><a href="#" class="hover:underline">Terms of Service</a></li>
+                    <li><a href="#" class="hover:underline">Newsletter Signup</a></li>
+                    <li><a href="#" class="hover:underline">FAQ</a></li>
+                    <li><a href="#" class="hover:underline">Privacy Policy</a></li>
                 </ul>
             </nav>
-
-            <div class="social-media">
-                <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i> Facebook</a>
-                <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i>Twitter</a>
-                <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i>
-                    Instagram</a>
+            <div class="mt-4">
+                <a href="https://facebook.com" target="_blank" class="mx-2 text-white hover:text-gray-400"><i
+                        class="fa-brands fa-square-facebook"></i> Facebook</a>
+                <a href="https://twitter.com" target="_blank" class="mx-2 text-white hover:text-gray-400"><i
+                        class="fa-brands fa-twitter"></i> Twitter</a>
+                <a href="https://instagram.com" target="_blank" class="mx-2 text-white hover:text-gray-400"><i
+                        class="fa-brands fa-square-instagram"></i> Instagram</a>
             </div>
-
-            <address>
+            <address class="mt-4">
                 <p>Address: Ankara, Turkey</p>
-                <p>Email: <a href="mailto:info@blacknews.com">info@blacknews.com</a></p>
+                <p>Email: <a href="mailto:info@blacknews.com" class="underline">info@blacknews.com</a></p>
                 <p>Phone: +90 555 555 5555</p>
             </address>
         </div>
     </footer>
-
 </body>
 
 </html>
