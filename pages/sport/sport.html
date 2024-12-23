@@ -44,24 +44,24 @@
             <div class="sm:hidden relative">
 
                 <label class="flex items-center justify-center w-9 h-9 bg-gray-500 rounded-full cursor-pointer">
-                    <i class="fa-solid fa-magnifying-glass text-white"></i>
+                  <i class="fa-solid fa-magnifying-glass text-white"></i>
                 </label>
-
-                <input type="text"
-                    class="absolute left-0 w-48 px-4 py-2 mt-2 text-sm border border-white rounded-md shadow-md outline-none hidden bg-white peer-focus:block transition-all duration-300 ease-in-out">
-            </div>
+              
+                <input type="text" 
+                       class="absolute left-0 w-48 px-4 py-2 mt-2 text-sm border border-white rounded-md shadow-md outline-none hidden bg-white peer-focus:block transition-all duration-300 ease-in-out">
+              </div>
 
             <a href="/pages/Login/Login.html" class="text-sm lg:text-lg pr-[5px] sm:pr-[15px] pl-[5px] sm:pl-[15px] text-white border border-white py-1  px-4 rounded-full bg-gray-800 hover:bg-gray-600 
               text-sm md:text-base lg:text-lg whitespace-nowrap">
                 <i class="fa-solid fa-user mr-1 sm:mr-2"></i> login
             </a>
-
+        
         </div>
     </header>
 
     <input type="checkbox" id="sidebar-toggle" class="peer hidden">
     <aside
-        class="fixed mt-[-65px] left-0 w-1/4 h-full bg-gray-900 text-white p- pt-[30px] transform -translate-x-full transition-transform duration-300 peer-checked:translate-x-0 z-40">
+        class="fixed mt-[50px] left-0 w-1/4 h-full bg-gray-900 text-white pt-[5px] transform -translate-x-full transition-transform duration-300 peer-checked:translate-x-0 z-40">
         <ul>
 
             <li><a href="index.html" class="block lg:hidden py-2 px-4 hover:bg-gray-600 rounded"><i
@@ -84,77 +84,78 @@
         </ul>
     </aside>
 
-    <main class="mt-24 mb-4 lg:mt-28 px-4 lg:px-8">
-        <section class="max-w-7xl mx-auto">
-            <!-- Başlık ve Tanıtım -->
-            <header class="text-center mb-12">
-                <h1 class="text-4xl lg:text-6xl font-extrabold text-gray-800 tracking-wide">World News</h1>
-                <p class="text-gray-600 text-lg lg:text-xl mt-4">Stay updated with the latest news from around the globe.</p>
-            </header>
+    <section class="bg-gray-100 py-16 mt-6">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Latest in Sports</h2>
     
-            <!-- Öne Çıkan Haber -->
-            <div class="relative bg-gray-800 text-white rounded-lg overflow-hidden mb-12 shadow-lg">
-                <img src="/access/world/world news2.png" alt="Featured News" class="w-full h-64 lg:h-96 object-cover opacity-70">
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-90"></div>
-                <div class="absolute bottom-8 left-8 z-10">
-                    <h2 class="text-3xl lg:text-5xl font-bold mb-4">Breaking: Global Climate Summit 2024</h2>
-                    <p class="text-gray-300 text-sm lg:text-base mb-4">World leaders gather to address climate change and sustainability goals.</p>
-                    <a href="/pages/world/featured.html" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full text-sm lg:text-base">Read More</a>
+            <!-- Featured Article -->
+            <div class="relative bg-gray-900 text-white rounded-lg overflow-hidden shadow-lg mb-12">
+                <img src="/access/sport/news1.png" alt="Featured Sports News" class="w-full h-96 object-cover opacity-80">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                <div class="absolute bottom-6 left-6">
+                    <span class="bg-green-600 text-white text-sm px-3 py-1 rounded-full">Featured</span>
+                    <h3 class="text-3xl font-bold mt-4">Historic Win in the Finals</h3>
+                    <p class="text-gray-300 mt-2 max-w-xl">
+                        A dramatic finish to the season as the champions lift the trophy after a thrilling match.
+                    </p>
+                    <a href="#" class="inline-block mt-4 bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full font-medium">
+                        Read More
+                    </a>
                 </div>
             </div>
     
-            <!-- Kategori Sekmeleri -->
-            <div class="flex justify-center space-x-4 mb-8">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">All</button>
-                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-full hover:bg-gray-300">Economy</button>
-                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-full hover:bg-gray-300">Environment</button>
-                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-full hover:bg-gray-300">Technology</button>
+            <!-- Sports News Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- News Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/access/sport/news2.png" alt="News Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="bg-blue-600 text-white text-xs px-3 py-1 rounded-full">Football</span>
+                        <h4 class="text-xl font-bold mt-4">Exciting League Updates</h4>
+                        <p class="text-gray-600 mt-2 text-sm">
+                            Latest scores and standings from the ongoing football league.
+                        </p>
+                        <a href="#" class="inline-block mt-4 text-blue-500 hover:text-blue-700 font-medium">Read More</a>
+                    </div>
+                </div>
+    
+                <!-- News Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/access/sport/news3.png" alt="News Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="bg-red-600 text-white text-xs px-3 py-1 rounded-full">Basketball</span>
+                        <h4 class="text-xl font-bold mt-4">Playoff Drama Unfolds</h4>
+                        <p class="text-gray-600 mt-2 text-sm">
+                            Intense moments as teams battle it out in the playoffs.
+                        </p>
+                        <a href="#" class="inline-block mt-4 text-red-500 hover:text-red-700 font-medium">Read More</a>
+                    </div>
+                </div>
+    
+                <!-- News Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/access/sport/news4.png" alt="News Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="bg-yellow-600 text-white text-xs px-3 py-1 rounded-full">Tennis</span>
+                        <h4 class="text-xl font-bold mt-4">Grand Slam Highlights</h4>
+                        <p class="text-gray-600 mt-2 text-sm">
+                            A roundup of the most thrilling moments from the Grand Slam tournament.
+                        </p>
+                        <a href="#" class="inline-block mt-4 text-yellow-500 hover:text-yellow-700 font-medium">Read More</a>
+                    </div>
+                </div>
             </div>
     
-            <!-- Haber Kartları -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Haber Kartı 1 -->
-                <div class="group relative bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                    <img src="/access/world/world news1.png" alt="News Image" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Economy</span>
-                        <h2 class="mt-2 text-2xl font-semibold text-gray-800 group-hover:text-blue-500 transition-colors duration-300">Global Economy Shows Signs of Recovery</h2>
-                        <p class="mt-4 text-gray-600 text-sm">The global economy is showing signs of recovery as major markets stabilize...</p>
-                        <div class="mt-6 flex justify-between items-center text-gray-500 text-xs">
-                            <span>Published: Dec 23, 2024</span>
-                            <a href="/pages/world/article1.html" class="text-blue-500 hover:underline">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Haber Kartı 2 -->
-                <div class="group relative bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                    <img src="/access/world/world news3.png" alt="News Image" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Environment</span>
-                        <h2 class="mt-2 text-2xl font-semibold text-gray-800 group-hover:text-blue-500 transition-colors duration-300">Climate Change Efforts Intensify</h2>
-                        <p class="mt-4 text-gray-600 text-sm">Countries around the world are intensifying efforts to combat climate change...</p>
-                        <div class="mt-6 flex justify-between items-center text-gray-500 text-xs">
-                            <span>Published: Dec 22, 2024</span>
-                            <a href="/pages/world/article2.html" class="text-blue-500 hover:underline">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Haber Kartı 3 -->
-                <div class="group relative bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                    <img src="/access/world/world news4.png" alt="News Image" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Technology</span>
-                        <h2 class="mt-2 text-2xl font-semibold text-gray-800 group-hover:text-blue-500 transition-colors duration-300">Technology Trends for 2024</h2>
-                        <p class="mt-4 text-gray-600 text-sm">Experts predict groundbreaking advancements in AI and renewable energy...</p>
-                        <div class="mt-6 flex justify-between items-center text-gray-500 text-xs">
-                            <span>Published: Dec 21, 2024</span>
-                            <a href="/pages/world/article3.html" class="text-blue-500 hover:underline">Read More</a>
-                        </div>
-                    </div>
-                </div>
+            <!-- CTA Button -->
+            <div class="text-center mt-12">
+                <button
+                    class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    View All Sports News
+                </button>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
     
     <footer class="bg-gray-800 text-white py-6 text-center">
         <div class="max-w-7xl mx-auto">

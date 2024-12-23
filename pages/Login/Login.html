@@ -5,99 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: rgb(187, 187, 187);
-            margin: 0;
-        }
-
-        .login-container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(187, 186, 186, 0.1);
-            width: 300px;
-            position: relative;
-        }
-
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .input-field {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .forgot-password {
-            font-size: 14px;
-            color: #131414;
-            text-decoration: none;
-        }
-
-        .register-btn {
-            width: 100%;
-            padding: 10px;
-            background-color: rgb(85, 85, 85);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .register-btn:hover {
-            background-color: rgb(29, 29, 29);
-        }
-
-        .links {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .back-icon {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 24px;
-            color: rgb(56, 56, 56);
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .back-icon:hover {
-            color: rgb(0, 0, 0);
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="flex items-center justify-center h-screen bg-gray-200">
 
-    <div class="login-container">
+    <div class="relative bg-white p-8 rounded-lg shadow-lg w-96">
 
-        <a href="/" class="back-icon">&#8592;</a>
+        <a href="/" class="absolute top-4 left-4 text-gray-600 hover:text-gray-900 text-xl">
+            &#8592;
+        </a>
 
-        <h2>Login</h2>
-        <form action="/login" method="POST">
-            <input type="email" class="input-field" placeholder="E-mail" name="email" required>
-            <input type="password" class="input-field" placeholder="Password" name="password" required>
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Login</h2>
 
-            <div class="links">
-                <a href="/forgot-password" class="forgot-password">Forgot your password?</a>
-                <a href="/pages/Signup/Sign up.html" class="forgot-password">Sign Up</a>
+        <form action="/login" method="POST" class="space-y-4">
+            <input type="email" name="email" placeholder="E-mail" 
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500" >
+            <input type="password" name="password" placeholder="Password" 
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500" >
+
+            <div class="flex justify-between text-sm text-gray-600">
+                <a href="/forgot-password" class="hover:underline">Forgot your password?</a>
+                <a href="/pages/Signup/Sign-up.html" class="hover:underline">Sign Up</a>
             </div>
 
-            <button type="submit" class="register-btn">login</button>
+            <button type="submit" 
+                class="w-full py-2 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-900 transition duration-200">
+                Login
+            </button>
         </form>
     </div>
 
